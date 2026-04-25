@@ -1,6 +1,7 @@
 import unittest
 from main import analyze_room_usage
 
+
 class TestRoomUsage(unittest.TestCase):
     def test_empty_list(self):
         self.assertEqual(analyze_room_usage([]), {})
@@ -14,7 +15,7 @@ class TestRoomUsage(unittest.TestCase):
             {"room": "101", "date": "2023-10-01", "time": "08:30"},
             {"room": "102", "date": "2023-10-01", "time": "10:00"},
             {"room": "101", "date": "2023-10-02", "time": "08:30"},
-            {"room": "205", "date": "2023-10-02", "time": "10:00"}
+            {"room": "205", "date": "2023-10-02", "time": "10:00"},
         ]
         self.assertEqual(analyze_room_usage(lessons), {"101": 2, "102": 1, "205": 1})
 
@@ -22,5 +23,6 @@ class TestRoomUsage(unittest.TestCase):
         lessons = [{"date": "2023-10-01", "time": "08:30"}]
         self.assertEqual(analyze_room_usage(lessons), {})
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

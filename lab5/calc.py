@@ -15,6 +15,7 @@ def calculate_consumption(previous_reading: float, current_reading: float) -> fl
         raise ValueError("Поточні показники не можуть бути меншими за попередні.")
     return current_reading - previous_reading
 
+
 def calculate_energy_bill(consumption: float, rate: float = 4.32) -> float:
     """
     Обчислює суму до оплати за спожиту електроенергію.
@@ -33,13 +34,14 @@ def calculate_energy_bill(consumption: float, rate: float = 4.32) -> float:
         raise ValueError("Споживання не може бути від'ємним.")
     return consumption * rate
 
+
 def main():
     print("=== Калькулятор вартості електроенергії ===")
     try:
         prev = float(input("Введіть попередні показники лічильника (кВт-год): "))
         curr = float(input("Введіть поточні показники лічильника (кВт-год): "))
         rate_input = input("Введіть тариф (грн за кВт-год, натисніть Enter для 4.32): ")
-        
+
         rate = float(rate_input) if rate_input else 4.32
 
         consumption = calculate_consumption(prev, curr)
@@ -53,7 +55,9 @@ def main():
     except ValueError as e:
         print(f"Помилка: {e}. Будь ласка, вводьте коректні числові значення.")
 
+
 if __name__ == "__main__":
     import doctest
-    doctest.testmod() 
+
+    doctest.testmod()
     main()

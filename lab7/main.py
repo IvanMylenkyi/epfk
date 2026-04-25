@@ -1,4 +1,5 @@
 def analyze_room_usage(lessons: list[dict]) -> dict:
+    a = 0
     """
     Аналізує використання аудиторій, підраховуючи кількість занять у кожній.
 
@@ -24,7 +25,9 @@ def analyze_room_usage(lessons: list[dict]) -> dict:
             usage[room] = usage.get(room, 0) + 1
     return usage
 
+
 if __name__ == "__main__":
     # Запуск doctests при прямому виконанні файлу
     import doctest
+
     doctest.testmod(verbose=True)

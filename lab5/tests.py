@@ -1,6 +1,7 @@
 import unittest
 from calc import calculate_consumption, calculate_energy_bill
 
+
 class TestElectricityCalculator(unittest.TestCase):
 
     def test_calculate_consumption_normal(self):
@@ -23,5 +24,6 @@ class TestElectricityCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             calculate_energy_bill(-10.0, 4.32)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
