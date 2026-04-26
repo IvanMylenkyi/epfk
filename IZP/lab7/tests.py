@@ -1,5 +1,5 @@
 import unittest
-from main import analyze_room_usage
+from IZP.epfk.IZP.lab7.main import analyze_room_usage
 
 
 class TestRoomUsage(unittest.TestCase):

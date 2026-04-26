@@ -1,5 +1,5 @@
 import unittest
-from calc import calculate_consumption, calculate_energy_bill
+from IZP.epfk.IZP.lab5.calc import calculate_consumption, calculate_energy_bill
 
 
 class TestElectricityCalculator(unittest.TestCase):
